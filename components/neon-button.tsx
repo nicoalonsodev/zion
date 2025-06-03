@@ -1,71 +1,39 @@
 "use client"
 
 import type React from "react"
-import styled, { keyframes } from "styled-components"
 
-const neonGlow = keyframes`
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffcc44, 0 0 20px #ffcc44, 0 0 25px #ffcc44, 0 0 30px #ffcc44, 0 0 35px #ffcc44;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px rgba(255,204,68,0.8), 0 0 15px rgba(255,204,68,0.8), 0 0 20px rgba(255,204,68,0.8), 0 0 25px rgba(255,204,68,0.8), 0 0 30px rgba(255,204,68,0.8), 0 0 35px rgba(255,204,68,0.8);
-  }
-`
+import Link from "next/link"
+import { motion } from "framer-motion"
 
-const NeonButtonStyled = styled.button`
-  font-size: 20px;
-  padding: 10px 20px;
-  color: #fff;
-  border: 2px solid #ffcc44;
-  background-color: transparent;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-
-  &:hover {
-    color: #fff;
-    background-color: #ffcc44;
-    border-color: #ffcc44;
-    box-shadow: 0 0 10px #ffcc44, 0 0 20px #ffcc44, 0 0 30px #ffcc44;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, #ffcc44, transparent);
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-  }
-
-  &:hover:before {
-    transform: translateX(0);
-  }
-
-  &.neon {
-    animation: ${neonGlow} 1.5s ease-in-out infinite alternate;
-  }
-`
-
-interface NeonButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-  className?: string
+type NeonButtonProps = {
+  href: string
+  text: string
+  icon?: React.ReactNode
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({ children, onClick, className }) => {
+export default function NeonButton({ href, text, icon }: NeonButtonProps) {
   return (
-    <NeonButtonStyled onClick={onClick} className={className}>
-      {children}
-    </NeonButtonStyled>
+    <motion.div className="relative inline-block" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+      {/* Glow effect */}
+      <div className="absolute -inset-1 bg-[#ffcc44]/20 rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+
+      <Link
+        href={href}
+        className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden rounded-lg bg-gradient-to-br from-[#ffcc44] to-[#fcd467] text-black font-bold text-lg md:text-xl transition-all duration-500 ease-out group"
+      >
+        {/* Inner glow and effects */}
+        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
+
+        {/* Button content */}
+        <span className="relative flex items-center">
+          {icon}
+          {text}
+        </span>
+
+        {/* Shine effect */}
+        <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+      </Link>
+    </motion.div>
   )
 }
-
-export default NeonButton

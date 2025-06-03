@@ -105,7 +105,7 @@ export default function ThanksPage() {
   const videoUrl2 = "https://fast.wistia.net/embed/iframe/neqde2b0ys";
 
   const wpMessage =
-    "https://wa.me/5ext=Hola%20Marilina%20c%C3%B3mo%20est%C3%A1s%3F%20Confirmo%20mi%20llamada!";
+    "https://wa.me/+5219844494050?text=Hola%20Marilina%20c%C3%B3mo%20est%C3%A1s%3F%20Confirmo%20mi%20llamada!";
 
   return (
     <div
@@ -949,7 +949,7 @@ export default function ThanksPage() {
                 <span className="text-[#ffcc44] font-medium">
                   CEO & Fundador del Ecosistema ZION
                 </span>{" "}
-                | Jaime Dixit
+                | Jaime Kloner
               </h3>
               <p className="text-base sm:text-lg leading-relaxed">
                 – Profesional en ventas con más de 22 años de trayectoria
