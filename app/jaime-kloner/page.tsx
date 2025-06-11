@@ -101,7 +101,7 @@ export default function ThanksPage() {
     },
   };
 
-  const videoUrl = "https://fast.wistia.net/embed/iframe/1rnjc1dgal";
+  const videoUrl = "https://fast.wistia.net/embed/iframe/urumjxolev";
   const videoUrl2 = "https://fast.wistia.net/embed/iframe/neqde2b0ys";
 
   const wpMessage =
