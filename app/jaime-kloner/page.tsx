@@ -239,31 +239,31 @@ export default function ThanksPage() {
           variants={fadeInUpVariants}
         >
           {/* Video Section */}
-          <motion.div
+          {/* <motion.div
             className="w-full mx-auto relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          > */}
             {/* Contenedor responsivo */}
-            <div
-              className={`relative w-full overflow-hidden rounded-xl shadow-lg border border-gray-800/30 bg-black/20 backdrop-blur-sm ${"pt-[56.25%]"}`}
-            >
+            {/* <div
+              className={`relative w-full overflow-hidden rounded-xl shadow-lg border border-gray-800/30 bg-black/20 backdrop-blur-sm ${"pt-[56.25%]"}`} 
+            >*/}
               {/* Iframe del video */}
-              <iframe
+              {/* <iframe
                 src={videoUrl2}
                 allow="autoplay; fullscreen"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full"
                 title="Video Zion"
-              ></iframe>
+              ></iframe> */}
 
               {/* Efecto de brillo en los bordes */}
-              <div className="absolute inset-0 rounded-xl pointer-events-none border border-yellow-400/20 shadow-lg shadow-yellow-400/30"></div>
+              {/* <div className="absolute inset-0 rounded-xl pointer-events-none border border-yellow-400/20 shadow-lg shadow-yellow-400/30"></div>
             </div>
-          </motion.div>
+          </motion.div> */}
           {/* Warning Text */}
-          <p
+          {/* <p
             className="text-lg sm:text-xl md:text-3xl mb-6 sm:mb-8 font-light px-2 mt-8 tracking-wide"
             style={{ wordSpacing: "0.2em" }}
           >
@@ -284,7 +284,7 @@ export default function ThanksPage() {
             >
               👇
             </motion.span>
-          </p>
+          </p> */}
           {/* Video Section */}
           <motion.div
             className="w-full mx-auto relative"
