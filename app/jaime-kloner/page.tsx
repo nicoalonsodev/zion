@@ -981,6 +981,50 @@ export default function ThanksPage() {
               </p>
             </GlowingCard>
           </motion.div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            custom={11}
+            variants={fadeInUpVariants}
+          >
+            <GlowingCard className="aspect-square overflow-hidden">
+              <Image
+                src="/closers/ariel.jpeg?height=500&width=500"
+                alt="Co-Fundador portrait"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+            </GlowingCard>
+            <GlowingCard className="flex flex-col justify-center p-8 backdrop-blur-xl bg-black/30">
+              <h3 className="text-3xl md:text-4xl mb-4 font-light">
+                <span className="text-[#5eff00] font-medium">
+                  CEO & Fundador del Ecosistema ZION
+                </span>{" "}
+                | Ariel Bianansi
+              </h3>
+              <p className="text-base sm:text-lg leading-relaxed">
+                Tengo 38 años, soy argentino y hace más de 10 años me dedico al
+                mundo de las ventas, automatización de negocios y liderazgo de
+                equipos de alto rendimiento. Formé un equipo comercial de 150
+                personas en 5 años y hoy ayudo a coaches, consultores y dueños
+                de negocios a duplicar sus ventas, automatizar procesos y
+                recuperar su tiempo.
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed mt-3 sm:mt-4">
+                Tengo experiencia en productos físicos y servicios digitales,
+                con foco en ventas high ticket y estructuras comerciales con
+                inteligencia artificial.
+              </p>
+              <p className="text-base sm:text-lg leading-relaxed mt-3 sm:mt-4">
+                Actualmente colaboro con Henko AI, una agencia enfocada en
+                marketing digital e inteligencia artificial, con el objetivo de
+                potenciar negocios con nuestras herramientas de IA.
+              </p>
+            </GlowingCard>
+          </motion.div>
         </div>
 
         {/* FAQ Section */}
