@@ -1000,7 +1000,7 @@ export default function ThanksPage() {
             </GlowingCard>
             <GlowingCard className="flex flex-col justify-center p-8 backdrop-blur-xl bg-black/30">
               <h3 className="text-3xl md:text-4xl mb-4 font-light">
-                <span className="text-[#5eff00] font-medium">
+              <span className="text-[#ffcc44] font-medium">
                   CEO & Fundador del Ecosistema ZION
                 </span>{" "}
                 | Ariel Bianansi
